@@ -1,4 +1,5 @@
-#Init scripts to enable socketCAN
+# Init scripts to enable socketCAN
+# python init.py
 
 from subprocess import call
 

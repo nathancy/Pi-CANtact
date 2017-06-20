@@ -1,3 +1,5 @@
+# Script to send data using socketCAN
+
 from pyvit import can
 from pyvit.hw import socketcan
 

@@ -6,6 +6,7 @@ def frame_dec(frame):
     print("Frame ID is", frame.arb_id)
     print("Frame data is", frame.data)
     print("Frame DLC is", frame.dlc)
+    print("-" * 60)
 def frame_hex(frame):
     print("Frame ID is", hex(frame.arb_id))
     hex_data = []
@@ -13,8 +14,9 @@ def frame_hex(frame):
         hex_data.append(hex(data))
     print("Frame data is", hex_data)
     print("Frame DLC is", hex(frame.dlc))
+    print("-" * 60)
 
-#Check for current argument input
+# Check for current argument input
 if len(sys.argv) is not 2:
     print('''
     Usage: python socketCAN.py [options]
@@ -26,15 +28,15 @@ if len(sys.argv) is not 2:
         ''')
     sys.exit()
 
-#Init socketcan
+# Init socketcan
 dev = socketcan.SocketCanDev("can0")
 dev.start()
 while True:
     frame = dev.recv()
-    #print in decimal
+    # Print in decimal
     if(sys.argv[1] == '-d'):
         frame_dec(frame)
-    #print in hex
+    # Print in hex
     if(sys.argv[1] == '-h'):
         frame_hex(frame)
        

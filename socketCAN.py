@@ -3,12 +3,10 @@ from pyvit.hw import socketcan
 import sys
 
 def frame_dec(frame):
-    print('================= Decimal ================')
     print("Frame ID is", frame.arb_id)
     print("Frame data is", frame.data)
     print("Frame DLC is", frame.dlc)
 def frame_hex(frame):
-    print('================= Hex ================')
     print("Frame ID is", hex(frame.arb_id))
     hex_data = []
     for data in frame.data:

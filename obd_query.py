@@ -1,3 +1,5 @@
+# Script to query commands from OBD
+
 import obd
 import sys 
 
@@ -168,7 +170,6 @@ else:
 
 # Generate commands 
 command_generator()
-
 
 while True:
     cmd = input(''' 

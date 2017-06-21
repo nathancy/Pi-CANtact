@@ -38,6 +38,6 @@ while True:
     if(sys.argv[1] == '-d'):
         frame_dec(frame)
     # Print in hex
-    if(sys.argv[1] == '-h'):
+    if(sys.argv[1] == 'h'):
         frame_hex(frame)
-       
+

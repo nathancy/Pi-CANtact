@@ -33,6 +33,7 @@ dev = socketcan.SocketCanDev("can0")
 dev.start()
 while True:
     frame = dev.recv()
+    # print(frame)
     # Print in decimal
     if(sys.argv[1] == '-d'):
         frame_dec(frame)

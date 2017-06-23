@@ -9,9 +9,14 @@ Initialize CANtact with:
 python init.py
 ```
 
-To display messages on the bus in realtime: 
+To display messages on the bus in realtime (Frame ID, packet data): 
 ```
 python socketCAN.py [options]
+```
+
+To display messages on the bus filtered by IDs according to packets in comands_db.json. Scans bus only for IDs in .json file.
+```
+python socketCAN_json.py 
 ```
 
 To send a single CAN frame onto the bus:
@@ -23,6 +28,11 @@ will send a message on interface `can0` with identifier `0x123` and data bytes `
 To send CAN frames onto the bus using scripts:
 ```
 python socketsend.py
+```
+
+To request sensor queries according to OBD command tables:
+```
+python obd_query.py
 ```
 
 To generate random CAN data, useful for testing:

@@ -40,4 +40,6 @@ To generate random CAN data, useful for testing:
 cangen can0
 ```
 
+Overall block diagram
+![CANtact-PI module](doc/diagram.jpg)
 
